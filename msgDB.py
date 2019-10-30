@@ -21,7 +21,10 @@ def enterMsg(name,email,msg):
     db.execute("INSERT INTO msgBackUp VALUES(?,?,?)",(name,email,msg))
     con.commit()
 
-
+def getMsgs():
+    db.execute("SELECT * FROM msg")
+    msgs = db.fetchall()
+    return msgs
 
 
 

@@ -60,6 +60,15 @@ def sendmsg():
     flash('Your message is sent !')
     return redirect(url_for('contact'))
 
+@app.route("/sugg")
+def sugg():
+    if 'username' in session:
+        msgs = md.getMsgs()
+        #msgs = []
+        return render_template("msgs.html", msgs = msgs)
+    else:
+        return redirect(url_for('login'))
+
 @app.route('/comment')
 def comment():
     cmnt = cd.getCmnt()
