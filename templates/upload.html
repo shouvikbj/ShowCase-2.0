@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <title>ShowCase-upload media</title>
+    <style>
+        #heading-text{
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-weight: bold;
+            color: rgba(0, 0, 255, 0.643);
+            font-size: 250%;
+        }
+        input[type=text]{
+            text-decoration: none;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            width: 90%;
+            height: 35px;
+            border: 1px solid slategray;
+        }
+        input[type=file]{
+            text-decoration: none;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            width: 90%;
+            border: 1px solid slategray;
+        }
+        textarea{
+            text-decoration: none;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            width: 90%;
+            height: 100px;
+            border: 1px solid slategray;
+        }
+        #post-btn{
+            text-decoration: none;
+            -moz-border-radius: 20px;
+            -webkit-border-radius: 20px;
+            border-radius: 20px;
+            width: 90%;
+            height: 40px;
+            border: none;
+            font-weight: bold;
+            background-color: rgba(0, 0, 255, 0.52);
+            color: white;
+        }
+        #reset-btn{
+            text-decoration: none;
+            -moz-border-radius: 20px;
+            -webkit-border-radius: 20px;
+            border-radius: 20px;
+            width: 90%;
+            height: 40px;
+            border: none;
+            font-weight: bold;
+            background-color: rgba(255, 0, 0, 0.52);
+            color: white;
+        }
+    </style>
+</head>
+<body align="center">
+    <div class="container">
+        <div id="heading">
+            <h3 id="heading-text">Add New Post</h3>
+            <p id="heading-para">( Admin access only )</p>
+        </div>
+        <div align="center" class="container">
+            <form action="/post" method="post"  enctype="multipart/form-data">
+                
+                <h5 id="desc"> Category of the photo/video</h5>
+                <input type="text" name="cat" id="cat" required="true"><br>
+                <!--<h5 id="desc">Short Description</h5>
+                <input type="text" name="short" id="short" required="true"><br>-->
+                <h5 id="desc">Description</h5>
+                <textarea type="text" name="long" id="long" required="true"></textarea><br>
+                <h5 id="desc">Camera/Device Specifications</h5>
+                <textarea type="text" name="specs" id="specs" required="true"></textarea><br>
+                <h5 id="desc">Provide image for post</h5>
+                <input id="file-picker" type="file" name="imgfile" accept="image/*"><br>
+                <h5 id="desc">Provide video for post</h5>
+                <input id="file-picker" type="file" name="vdofile" accept="video/*"><br><br>
+                <input type="submit" value="Post" id="post-btn"><br><br>
+                <input type="reset" value="Reset" id="reset-btn">
+            </form>
+        </div>
+        <br><br>
+
+    </div>
+
+
+    <script src="/app.js"></script>
+</body>
+</html>

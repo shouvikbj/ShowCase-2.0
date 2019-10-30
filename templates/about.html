@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <title>ShowCase-about</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #navbar{
+            position: fixed;
+            width: 100%;
+            box-shadow: 0px 3px 3px 1px lightgray;
+            background-color: none;
+            border-top: none;
+            text-decoration: none;
+            -moz-border-radius: 30px;
+            -webkit-border-radius: 30px;
+            border-radius: 30px;
+            /*border: 1px solid cornflowerblue;*/
+            margin-top: 1px;
+            padding: 4px;
+        }
+        #title{
+            color: blue;
+            font-weight: bold;
+            text-shadow: 1px 1px yellow;
+        }
+        #navoptions{
+            text-decoration: none;
+            -moz-border-radius: 30px;
+            -webkit-border-radius: 30px;
+            border-radius: 30px;
+            color: rgba(0, 0, 255, 0.568);
+        }
+        #navoptions:hover{
+            font-weight: bold;
+            font-size: 110%;
+            background-color: lightgrey;
+        }
+        #main-div{
+            padding-top: 55px;
+        }
+        #scroll-top{
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            z-index: 99;
+            font-size: 110%;
+            border: none;
+            outline: none;
+            background-color: rgba(0, 0, 255, 0.424);
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+            -moz-border-radius: 30px;
+            -webkit-border-radius: 30px;
+            border-radius: 30px;
+        }
+        #heading{
+            color: rgba(27, 27, 231, 0.739);
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: 250%;
+        }
+        #img{
+            border-radius: 20%;
+            object-fit: auto;
+            overflow: hidden;
+            box-shadow: 0px 5px 20px 5px slategray;
+        }
+        .h5{
+            color: slategray;
+        }
+        hr{
+            color: blue;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#scroll-top").hide();
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 0) {
+                    $('#scroll-top').fadeIn();
+                } else {
+                    $('#scroll-top').fadeOut();
+                }
+            });
+        });
+    </script>
+</head>
+<body align="center">
+    <div id="to-top"></div>           
+    <nav class="navbar navbar-default" id="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a href="#" class="navbar-brand" id="title"><p>ShowCase</p></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="/" id="navoptions">Home</a></li>
+                    <li class="active"><a href="#" id="navoptions">About</a></li>
+                    <li><a href="/comment" id="navoptions">Comment Section</a></li>
+                    <li><a href="/contact" id="navoptions">Contact Me</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <!--<li><a href="" id="navoptions"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+
+    <div class="container" id="main-div">
+        <div>
+            <h2 id="heading">About Me</h2>
+        </div>
+        <hr>
+        <div id="img">
+            <a target="_blank" href="/images/dada.jpg"><img src="/images/dada.jpg" alt="profile image" style="width: 100%;"></a>
+        </div>
+        <hr>
+        <div>
+            <h3 class="text-black mb-3" style="color: rgba(50, 38, 95, 0.678);">Howdy! I'm Soumen</h3>
+            <p style="color: rgba(0, 0, 255, 0.609);">I am an Engineer in Computer Science and also a very enthusiastic and capable photographer. Some of my photos are ShowCased here just to show you my ability as a photographer. Connect with me and I will put my full effort to frame some good memories to make them look even better in future.</p>
+            <p style="color: rgba(0, 0, 255, 0.609);">You will enjoy the photo session very much and that is my promise once you connect with me and give me a fair chance to show you my skills.</p>
+            <hr>
+            <p class="mt-5 mb-3" style="color: cornflowerblue;font-weight: bold; font-size: 200%;">Follow Me</p>
+            <p>
+                <a href="https://www.facebook.com/kittubj" class="p-2"><span class="icon-facebook"><i class="fab fa-facebook-f" style="color: blue; font-size: 250%;padding: 30px;"></i></span></a>                
+                <a href="https://www.instagram.com/bajpayeesoumen/" class="p-2"><span class="icon-instagram"><i class="fab fa-instagram" style="color: orange; font-size: 250%;padding: 30px;"></i></span></a>
+                <a href="https://www.google.com/maps/place/Panskura+Junction/@22.3926728,87.7405197,17z/data=!3m1!4b1!4m5!3m4!1s0x3a02bb217c355351:0x235b62b59d207320!8m2!3d22.3926728!4d87.7427084" class="p-2"><span class="icon-facebook"><i class="fas fa-map-marked-alt" style="color: red; font-size: 250%;padding: 30px;"></i></span></a>
+            </p>
+        </div>
+        <hr>
+        <div class="site-section pt-0" data-aos="fade">
+            <div class="container">
+                <div class="row">
+                <div class="col-md-12 mb-5">
+                    <h2 class="text-black" style="color:rgba(63, 139, 0, 0.753);font-weight: bold;">My Skills</h2>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+                    <h2 class="h5">Photography</h2>
+                    <div class="progress mb-4">
+                        <div class="progress-bar" role="progressbar" style="width: 97%;background-color: rgba(0, 128, 0, 0.602)" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100">97%</div>
+                    </div>
+                    <h2 class="h5">Photo Editing</h2>
+                    <div class="progress mb-4">
+                        <div class="progress-bar" role="progressbar" style="width: 85%;background-color: rgba(0, 17, 255, 0.582);" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                    </div>
+                    <h2 class="h5">WildLife Photography</h2>
+                    <div class="progress mb-4">
+                        <div class="progress-bar" role="progressbar" style="width: 90%;background-color: rgb(72, 255, 0);" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                    </div>
+                    <h2 class="h5">Macro Photography</h2>
+                    <div class="progress mb-4">
+                        <div class="progress-bar" role="progressbar" style="width: 80%;background-color: rgba(0, 17, 255, 0.424);" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+    <button id="scroll-top"><a href="#to-top"><i class="fas fa-arrow-up" style="font-size:24px;color: rgb(255, 251, 0);"></i></a></button>
+
+
+    <script src="/app.js"></script>
+</body>
+</html>
